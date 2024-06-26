@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/images-removebg-preview.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      MMOG
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="space"></div>
+<main class="container d-flex flex-wrap justify-content-center gap-5">
+  @for(elemento of todosLosDatos; track elemento.id){
+    <div class="card" style="width: 18rem;">
+      <img src="{{elemento.thumbnail}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{elemento.title}}</h5>
+        <p class="card-text">{{elemento.short_description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Type <b>{{elemento.genre}}</b></li>
+        <li class="list-group-item">Platform <b>{{elemento.platform}}</b></li>
+        <li class="list-group-item">Developer: <b>{{elemento.developer}}</b></li>
+      </ul>
+      <div class="card-body">
+        <a href="{{elemento.game_url}}" target="_blank" class="card-link" style="text-decoration: none;color: rgb(186, 82, 255);">Game</a>
+        <a href="{{elemento.profile_url}}" target="_blank" class="card-link" style="text-decoration: none; color:rgb(186, 82, 255) ;">MMOG Game</a>
+      </div>
+    </div>
+  }
+</main>
+<footer class="text-center my-5">&copy; 2024</footer>
+
+
+
+
